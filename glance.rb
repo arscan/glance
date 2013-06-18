@@ -28,7 +28,7 @@ begin
   puts deck["cards"][cardnumber]["question"]
 
   getkey
-  puts "-------------------------------"
+  puts "-" * 20
 
   puts deck["cards"][cardnumber]["answer"]
   puts "\n"
