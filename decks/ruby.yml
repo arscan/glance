@@ -1,0 +1,33 @@
+name: Ruby
+description: Ruby is as ruby does
+cards:
+   - question: This is a question
+     answer: This is a answer
+     difficulty: 1
+     active: true
+     invertable: true
+
+   - question: This is another question
+     answer: This is another answer
+     difficulty: 1
+     active: true
+     invertable: true
+
+   - question: This is 2another question
+     answer: This is another answer
+     difficulty: 1
+     active: true
+     invertable: true
+
+   - question: This is 3another question
+     answer: This is another answer
+     difficulty: 1
+     active: true
+     invertable: true
+
+   - question: This is 4nother question
+     answer: This is another answer
+     difficulty: 1
+     active: true
+     invertable: true
+
