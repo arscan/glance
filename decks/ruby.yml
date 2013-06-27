@@ -177,3 +177,32 @@ cards:
      difficulty: 1
      active: true
 
+   - question: make a static method
+     answer: def self.methodname
+     difficulty: 1
+     active: true
+
+   - question: What do you say at the top of a file (usually) if you want to bring in another files funcitonality (say mechanize)
+     answer: require 'mechanize'
+     difficulty: 1
+     active: true
+
+   - question: Filter down an array into string values equal to "hi"
+     answer: arrayname.select{|x| x == 'hi'}
+     difficulty: 1
+     active: true
+
+   - question: Print out variable "x" when writing out a string
+     answer: puts "this is a string #{x}"
+     difficulty: 1
+     active: true
+
+   - question: String begins with another string
+     answer: string1.start_with? string2
+     difficulty: 1
+     active: true
+
+   - question: Check to see if a variable is defined
+     answer: defined? variable_name
+     difficulty: 1
+     active: true

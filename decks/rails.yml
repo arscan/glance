@@ -1,0 +1,22 @@
+name: Rails 3.2
+description: Rails it up
+cards:
+   - question: Whitelist a variable in the model for mass assignment
+     answer: attr_accessible :variable 
+     difficulty: 1
+     active: true
+
+   - question: route for root, point it to a method in a controller
+     answer: root :to => "controller#method"
+     difficulty: 1
+     active: true
+
+   - question: How do you validate that something isn't blank
+     answer: In the model, you do something like validates :fieldname, presence: true
+     difficulty: 1
+     active: true
+
+   - question: How do you run a script from command line that includes the rails environment?
+     answer: rails runner script/scriptname
+     difficulty: 1
+     active: true
