@@ -206,3 +206,14 @@ cards:
      answer: defined? variable_name
      difficulty: 1
      active: true
+
+   - question: What is the standard hashbang line at the top of a ruby script?
+     answer: hashbang /usr/bin/env ruby
+     difficulty: 1
+     active: true
+
+   - question: How do you check if a hash has a key
+     answer: hashname.has_key?(:key)
+     difficulty: 1
+     active: true
+
