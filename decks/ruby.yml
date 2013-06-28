@@ -217,3 +217,18 @@ cards:
      difficulty: 1
      active: true
 
+   - question: How do you set the value of a variable only if its currently unset
+     answer: variable ||= 2
+     difficulty: 1
+     active: true
+
+   - question: In rspec, how do you test to see if the value of something is greater than 2
+     answer: variable.should be > 2
+     difficulty: 1
+     active: true
+
+   - question: In rspec, how do you test to see if a variable is of a certain class
+     answer: variable.should be_an_instance_of Classname
+     difficulty: 1
+     active: true
+
