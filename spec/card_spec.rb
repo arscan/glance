@@ -5,7 +5,7 @@ module Glance
   describe "card" do
 
     before :each do
-      @card = Card.new "Question", "Answer", 1, otherparam: 5
+      @card = Card.new "Question", "Answer", 1, history: [1,2,3,2,1,2]
     end
 
     describe "#new" do
@@ -26,6 +26,10 @@ module Glance
 
     it "should tell me what the difficulty was" do
       @card.difficulty.should eql 1
+    end
+
+    it "hsitory should be an array of lenght 6" do
+      @card.history.length.should eql 6
     end
   end
 
