@@ -29,11 +29,17 @@ module Glance
 
     describe "card actions on deck" do
       before :each do
-        10.times do |i|
-         card = Card.new("Question#{i}","Answer#{i}",i) 
+        100.times do |i|
+         card = Card.new("Question#{i}","Answer#{i}",i%10) 
          @deck.add_card(card)
         end
         
+      end
+
+      it "should grab 20 cards"do
+        cards = @deck.deal(20)
+
+        cards.length.should eql 20
       end
 
 

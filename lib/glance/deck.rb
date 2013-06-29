@@ -17,5 +17,15 @@ module Glance
       @cards << card
 
     end
+
+    def deal(num)
+
+      ret =  []
+
+      ret << @cards[rand(@cards.length)] while ret.length < num
+      
+      ret
+
+    end
   end
 end
