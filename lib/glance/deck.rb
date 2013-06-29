@@ -21,9 +21,14 @@ module Glance
     def deal(num)
 
       ret =  []
+      tmpcards = @cards.clone
 
-      ret << @cards[rand(@cards.length)] while ret.length < num
-      
+      while ret.length < num
+        next_i = rand(tmpcards.length)
+        ret << tmpcards[next_i]
+        tmpcards.delete_at next_i
+      end
+
       ret
 
     end
