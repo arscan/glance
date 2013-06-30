@@ -22,11 +22,18 @@ module Glance
 
       ret =  []
       tmpcards = @cards.clone
+      tmpcards.sort! do |a,b|
+        # if they are due within a minute, sort based on difficulty instead
+        if ((a.next-b.next)/60).round == 0
+          a.difficulty <=> b.difficulty
+        else
+          a.next <=> b.next
+        end
+      end
 
-      while ret.length < num
-        next_i = rand(tmpcards.length)
-        ret << tmpcards[next_i]
-        tmpcards.delete_at next_i
+
+      tmpcards.each do |t|
+        ret << t if ret.length < num
       end
 
       ret
