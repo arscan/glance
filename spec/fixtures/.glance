@@ -1,0 +1,364 @@
+---
+- !ruby/object:Glance::Deck
+  descripton: 
+  name: 
+  cards:
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: attr_accessible :variable
+    question: Whitelist a variable in the model for mass assignment
+    history: 
+       - 2
+       - 1
+       - 1
+       - 1
+       - 1
+    next: 2013-07-02 01:29:35 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: root :to => "controller#method"
+    question: route for root, point it to a method in a controller
+    history: 
+       - 5
+       - 4
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: In the model, you do something like validates \:fieldname, \:presence
+      true
+    question: How do you validate that something isn't blank
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: rails runner script/scriptname
+    question: How do you run a script from command line that includes the rails environment?
+    history: 
+    next: 
+    last: 
+    unlocked: false
+- !ruby/object:Glance::Deck
+  descripton: 
+  name: 
+  cards:
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: irb
+    question: Ruby console
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: object = Class.new("Param1", 2)
+    question: Create an instance of a class
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! "def concat(string1, string2)\n   string1 + string2\nend\n"
+    question: Create a method concat that returns 2 strings concatinated
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: Start with a lower case, no @/@@/$
+    question: What are the naming convention for local variables?
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: favorite_foods = ["tacos","steak","pizza","carrots"]
+    question: Create an array favorite_foods with some of my favorite foods inside
+      (literal notation)
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! "captials = {\n   Massachusetts: \"Boston\",\n   \"Rhode Island\" =>
+      \"Providence\",\n   Connecticut: \"Hartford\",\n   Maine: \"Augusta\",\n   \"New
+      Hampshire\" => \"Concord\",\n   Vermont: \"Montpelllliaaaayyy\" \n}\n"
+    question: Create a hash of states in New England and their capitals
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! "if something\n   puts \"doing something\"\nelsif somethingelse\n   puts
+      \"doing something else\"\nelse \n   puts \"and finally doing this\"\nend \n"
+    question: Make a simple if then else if else statement
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! "i = 0\nwhile i <= 100\n   puts i\n   i+=1\nend \n"
+    question: Make a simple while statement that iterates and prints from 0 to 100
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: puts "YAYYYY" if Time.now.saturday?
+    question: Use a statement modifier to only print out "YAYYY" when today is saturday
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: puts "ARGH" unless Time.now.saturday?
+    question: Use a statement modifier to only print out "ARGH" if today is NOT saturday
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: Its a statement modifier, silly
+    question: What is it called when I do something like this "puts 1 if that"
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: /Rob|Liz/
+    question: Create a regular expression that matches either "Rob" or "Liz"
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! 'line = gets
+
+      line = line.gsub(/Hi/,"Bye")
+
+
+      (and you would use sub to just replace the first occurance)
+
+'
+    question: Replace every occurance of "Hi" with "Bye" in string blah.  How would
+      you just replace the first instance?
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! 'line = gets
+
+      puts "Hi there!" if line =~ /Rob|Liz/
+
+'
+    question: Print out "Hi there!" if a string contains either "Rob" or "Liz" in
+      it
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! '{ } or do ... end
+
+
+      usually you wnat to do a do ... end if on more than one line
+
+'
+    question: What are the two ways of doing a code block?
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: yield
+    question: How do you invoke a block passed into a method?
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: array_name.each {|n| puts n}
+    question: Use an iterator to print out everything in an array
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! "class Person\n   def initialize(name)\n      @name = name\n   end\nend\n\nrob
+      = Person.new(\"Rob Scanlon\")\n"
+    question: create a Person class that takes in a name argument
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! "class Person\n   attr_accessor :name\n   attr_reader :ssn\n\n   def
+      initialize(name,ssn)\n      @name, @ssn = name, ssn\n   end\nend\n\nrob = Person.new(\"Rob\",12334)\nrob.name
+      = \"Bob\"\nputs rob.name\nputs rob.ssn\n"
+    question: create a person class that I can change the name but not the ssn
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: def name=(val)
+    question: Make a method that sets a value
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: Not much really.  Attributes change the state of your object, while methods
+      do other stuff.
+    question: What is the difference between methods and attributes of a class?
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: ! 'Public: called by anyone, no access control defined
+
+      Protected: called by objects of hte defined class and its subclasses
+
+      Private: can only be called by current object (cannot specify a different reciever
+      other than self)
+
+'
+    question: What are the types of access control on objects?
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: variable.freeze
+    question: How would I make it so I can't change a variable
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: object.class
+    question: How do you print out the type of an object
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: def self.methodname
+    question: make a static method
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: require 'mechanize'
+    question: What do you say at the top of a file (usually) if you want to bring
+      in another files funcitonality (say mechanize)
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: arrayname.select{|x| x == 'hi'}
+    question: Filter down an array into string values equal to "hi"
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: puts "this is a string
+    question: Print out variable "x" when writing out a string
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: string1.start_with? string2
+    question: String begins with another string
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: defined? variable_name
+    question: Check to see if a variable is defined
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: hashbang /usr/bin/env ruby
+    question: What is the standard hashbang line at the top of a ruby script?
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: hashname.has_key?(:key)
+    question: How do you check if a hash has a key
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: variable ||= 2
+    question: How do you set the value of a variable only if its currently unset
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: variable.should be > 2
+    question: In rspec, how do you test to see if the value of something is greater
+      than 2
+    history: 
+    next: 
+    last: 
+    unlocked: false
+  - !ruby/object:Glance::Card
+    difficulty: 1
+    answer: variable.should be_an_instance_of Classname
+    question: In rspec, how do you test to see if a variable is of a certain class
+    history: 
+    next: 
+    last: 
+    unlocked: false

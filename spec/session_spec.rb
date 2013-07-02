@@ -74,6 +74,19 @@ module Glance
 
     end
 
+    it "should be able to load up a save file" do
+      @session.load!(File.expand_path(File.dirname(__FILE__)) + "/fixtures/.glance")
+
+      @session.decks.length.should be 2
+      @session.decks[0].cards.length.should be 4
+      @session.decks[0].cards[0].should be_an_instance_of Card
+      @session.decks[0].cards[0].question.should be_an_instance_of String
+      @session.decks[0].cards[0].next.should be_an_instance_of Time
+      @session.decks[0].cards[0].history.should be_an_instance_of Array
+      @session.decks[0].cards[0].history.length.should be 5
+
+    end
+
   end
 
 

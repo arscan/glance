@@ -1,6 +1,10 @@
+require "yaml"
+
 module Glance
 
   class Session
+
+    attr_reader :cards, :decks
 
     def initialize(num_cards = 20)
       @num_cards = num_cards
@@ -22,7 +26,6 @@ module Glance
 
       end
 
-      
     end
 
     def cards_left
@@ -34,6 +37,20 @@ module Glance
     end
 
 
+    def load!(glancefile = ENV['HOME'] + '/.glance')
+      gf = YAML::load(File.open(glancefile))
+      gf.each do |a|
+        @decks << a
+      end
+
+    end
+
+    def save(glancefile = ENV['HOME'] + '/.glance')
+
+      output = decks.to_yaml
+      File.open(glancefile,'w'){ |f| f.write output}
+
+    end
   end
 
   class Flash
