@@ -86,6 +86,12 @@ module Glance
       @session.decks[0].cards[0].history.length.should be 5
 
     end
+    it "should be able to add a deck from a yaml file" do
+      @session.load_deck(File.expand_path(File.dirname(__FILE__)) + "/fixtures/ruby.yml")
+      @session.cards.length.should be > 5
+      @session.decks.length.should be > 0
+    end
+
 
   end
 

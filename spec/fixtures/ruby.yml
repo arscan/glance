@@ -1,0 +1,234 @@
+name: Ruby 1.9.3
+description: Ruby is as ruby does
+cards:
+   - question: Ruby console
+     answer: irb 
+     difficulty: 1
+     active: true
+
+   - question: Create an instance of a class
+     answer: object = Class.new("Param1", 2) 
+     difficulty: 1
+     active: true
+
+   - question: Create a method concat that returns 2 strings concatinated
+     answer: |
+             def concat(string1, string2)
+                string1 + string2
+             end
+     difficulty: 1
+     active: true
+
+   - question: What are the naming convention for local variables?
+     answer: Start with a lower case, no @/@@/$
+     difficulty: 1
+     active: true
+
+   - question: Create an array favorite_foods with some of my favorite foods inside (literal notation)
+     answer: favorite_foods = ["tacos","steak","pizza","carrots"]
+     difficulty: 1
+     active: true
+
+   - question: Create a hash of states in New England and their capitals
+     answer: |
+             captials = {
+                Massachusetts: "Boston",
+                "Rhode Island" => "Providence",
+                Connecticut: "Hartford",
+                Maine: "Augusta",
+                "New Hampshire" => "Concord",
+                Vermont: "Montpelllliaaaayyy" 
+             }
+     difficulty: 1
+     active: true
+
+   - question: Make a simple if then else if else statement
+     answer: |
+             if something
+                puts "doing something"
+             elsif somethingelse
+                puts "doing something else"
+             else 
+                puts "and finally doing this"
+             end 
+     difficulty: 1
+     active: true
+
+   - question:  Make a simple while statement that iterates and prints from 0 to 100
+     answer: | 
+             i = 0
+             while i <= 100
+                puts i
+                i+=1
+             end 
+     difficulty: 1
+     active: true
+
+   - question: Use a statement modifier to only print out "YAYYY" when today is saturday
+     answer: puts "YAYYYY" if Time.now.saturday?  
+     difficulty: 1
+     active: true
+
+   - question: Use a statement modifier to only print out "ARGH" if today is NOT saturday
+     answer: puts "ARGH" unless Time.now.saturday?  
+     difficulty: 1
+     active: true
+
+   - question: What is it called when I do something like this "puts 1 if that"
+     answer: Its a statement modifier, silly
+     difficulty: 1
+     active: true
+
+   - question: Create a regular expression that matches either "Rob" or "Liz"
+     answer:  /Rob|Liz/
+     difficulty: 1
+     active: true
+
+   - question:  Replace every occurance of "Hi" with "Bye" in string blah.  How would you just replace the first instance?
+     answer: |
+             line = gets
+             line = line.gsub(/Hi/,"Bye")
+
+             (and you would use sub to just replace the first occurance)
+     difficulty: 1
+     active: true
+
+   - question: Print out "Hi there!" if a string contains either "Rob" or "Liz" in it
+     answer: |
+             line = gets
+             puts "Hi there!" if line =~ /Rob|Liz/
+     difficulty: 1
+     active: true
+
+   - question: What are the two ways of doing a code block?
+     answer: | 
+             { } or do ... end
+             
+             usually you wnat to do a do ... end if on more than one line
+     difficulty: 1
+     active: true
+
+   - question: How do you invoke a block passed into a method?
+     answer: yield
+     difficulty: 1
+     active: true
+
+   - question: Use an iterator to print out everything in an array
+     answer:  array_name.each {|n| puts n}
+     difficulty: 1
+     active: true
+
+   - question: create a Person class that takes in a name argument
+     answer: |
+             class Person
+                def initialize(name)
+                   @name = name
+                end
+             end
+
+             rob = Person.new("Rob Scanlon")
+             
+     difficulty: 1
+     active: true
+
+   - question: create a person class that I can change the name but not the ssn
+     answer: |
+             class Person
+                attr_accessor :name
+                attr_reader :ssn
+
+                def initialize(name,ssn)
+                   @name, @ssn = name, ssn
+                end
+             end
+   
+             rob = Person.new("Rob",12334)
+             rob.name = "Bob"
+             puts rob.name
+             puts rob.ssn
+     difficulty: 1
+     active: true
+
+   - question: Make a method that sets a value
+     answer:  def name=(val)
+     difficulty: 1
+     active: true
+
+   - question: What is the difference between methods and attributes of a class?
+     answer: Not much really.  Attributes change the state of your object, while methods do other stuff.
+     difficulty: 1
+     active: true
+
+   - question: What are the types of access control on objects?
+     answer: |
+             Public: called by anyone, no access control defined
+             Protected: called by objects of hte defined class and its subclasses
+             Private: can only be called by current object (cannot specify a different reciever other than self)
+     difficulty: 1
+     active: true
+
+   - question: How would I make it so I can't change a variable
+     answer: variable.freeze
+     difficulty: 1
+     active: true
+
+   - question: How do you print out the type of an object
+     answer: object.class
+     difficulty: 1
+     active: true
+
+   - question: make a static method
+     answer: def self.methodname
+     difficulty: 1
+     active: true
+
+   - question: What do you say at the top of a file (usually) if you want to bring in another files funcitonality (say mechanize)
+     answer: require 'mechanize'
+     difficulty: 1
+     active: true
+
+   - question: Filter down an array into string values equal to "hi"
+     answer: arrayname.select{|x| x == 'hi'}
+     difficulty: 1
+     active: true
+
+   - question: Print out variable "x" when writing out a string
+     answer: puts "this is a string #{x}"
+     difficulty: 1
+     active: true
+
+   - question: String begins with another string
+     answer: string1.start_with? string2
+     difficulty: 1
+     active: true
+
+   - question: Check to see if a variable is defined
+     answer: defined? variable_name
+     difficulty: 1
+     active: true
+
+   - question: What is the standard hashbang line at the top of a ruby script?
+     answer: hashbang /usr/bin/env ruby
+     difficulty: 1
+     active: true
+
+   - question: How do you check if a hash has a key
+     answer: hashname.has_key?(:key)
+     difficulty: 1
+     active: true
+
+   - question: How do you set the value of a variable only if its currently unset
+     answer: variable ||= 2
+     difficulty: 1
+     active: true
+
+   - question: In rspec, how do you test to see if the value of something is greater than 2
+     answer: variable.should be > 2
+     difficulty: 1
+     active: true
+
+   - question: In rspec, how do you test to see if a variable is of a certain class
+     answer: variable.should be_an_instance_of Classname
+     difficulty: 1
+     active: true
+

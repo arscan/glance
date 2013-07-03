@@ -17,13 +17,31 @@ module Glance
       @decks << deck
     end
 
+    def load_deck deckfile
+      yaml = YAML::load(File.open(deckfile))
+      newdeck = Deck.new(yaml["name"], yaml["description"])
+      decks.each do |d|
+         return if d.name == yaml["name"]
+      end
+      yaml["cards"].each do |c|
+        newcard = Card.new(c["question"], c["answer"], c["difficulty"])
+        newdeck.add_card(newcard)
+      end
+      add_deck(newdeck)
+    end
+
     def play
 
-      while @cards.length > 0
-        card = @cards[rand(@cards.length)]
-        
-        yield Flash.new(card,self)
+      continue = true
 
+      while @cards.length > 0 && continue
+        card = @cards[rand(@cards.length)]
+
+        f = Flash.new(card,self)
+        
+        yield f 
+
+        continue = f.continue
       end
 
     end
@@ -54,8 +72,12 @@ module Glance
   end
 
   class Flash
+
+    attr_accessor :continue
+
     def initialize(card,session)
       @card, @session = card, session
+      @continue = true
     end
 
     def question
