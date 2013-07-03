@@ -17,19 +17,6 @@ module Glance
       @decks << deck
     end
 
-    def load_deck deckfile
-      yaml = YAML::load(File.open(deckfile))
-      newdeck = Deck.new(yaml["name"], yaml["description"])
-      decks.each do |d|
-         return if d.name == yaml["name"]
-      end
-      yaml["cards"].each do |c|
-        newcard = Card.new(c["question"], c["answer"], c["difficulty"])
-        newdeck.add_card(newcard)
-      end
-      add_deck(newdeck)
-    end
-
     def play
 
       continue = true
@@ -56,11 +43,25 @@ module Glance
 
 
     def load!(glancefile = ENV['HOME'] + '/.glance')
-      gf = YAML::load(File.open(glancefile))
-      gf.each do |a|
-        @decks << a
+      if File.exists?(glancefile)
+        gf = YAML::load(File.open(glancefile))
+        gf.each do |a|
+          add_deck(a)
+        end
       end
+    end
 
+    def load_deck deckfile
+      yaml = YAML::load(File.open(deckfile))
+      newdeck = Deck.new(yaml["name"], yaml["description"])
+      decks.each do |d|
+         return if d.name == yaml["name"]
+      end
+      yaml["cards"].each do |c|
+        newcard = Card.new(c["question"], c["answer"], c["difficulty"])
+        newdeck.add_card(newcard)
+      end
+      add_deck(newdeck)
     end
 
     def save(glancefile = ENV['HOME'] + '/.glance')
@@ -87,7 +88,7 @@ module Glance
       @card.answer
     end
     def score(score)
-      @session.remove_card(@card) if @card.score(score)
+      @session.remove_card(@card) if @card.score(score.to_i)
     end
   end
 end

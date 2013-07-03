@@ -23,8 +23,8 @@ module Glance
       @history << score
       @next = calc_next
       @last = Time.now
-      return false if history.length < 2
-      history[-2..-1].all?{|h| h == 3}
+      return false if @history.length < 2
+      @history[-2..-1].all?{|h| h == 3}
     end
 
     private
@@ -42,7 +42,7 @@ module Glance
 
       # count the number of threes since my last one
 
-      recent_threes = history.reverse[0..first_one].count(3)
+      recent_threes = @history.reverse[0..first_one].count(3)
 
       # if had a one in the last 5, automatically keep me around
       #

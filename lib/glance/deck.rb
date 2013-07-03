@@ -23,17 +23,22 @@ module Glance
       ret =  []
       tmpcards = @cards.clone
       tmpcards.sort! do |a,b|
+        anext = a.next
+        bnext = b.next
+
+        anext ||= Time.now
+        bnext ||= Time.now
         # if they are due within a minute, sort based on difficulty instead
-        if ((a.next-b.next)/60).round == 0
+        if ((anext-bnext)/60).round == 0
           a.difficulty <=> b.difficulty
         else
-          a.next <=> b.next
+          anext <=> bnext
         end
       end
 
 
       tmpcards.each do |t|
-        ret << t if ret.length < num
+        ret << t if ret.length < num && (t.next && t.next < Time.now)
       end
 
       ret

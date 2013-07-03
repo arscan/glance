@@ -7,12 +7,12 @@ cards:
      active: true
 
    - question: route for root, point it to a method in a controller
-     answer: root :to => "controller#method"
+     answer: root \:to => "controller#method"
      difficulty: 1
      active: true
 
    - question: How do you validate that something isn't blank
-     answer: In the model, you do something like validates :fieldname, presence: true
+     answer: In the model, you do something like validates \:fieldname, presence true
      difficulty: 1
      active: true
 
