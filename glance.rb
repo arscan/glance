@@ -1,7 +1,7 @@
 require_relative "lib/glance"
-
-
-
+require 'terminfo' #ruby-terminfo
+deck = ARGV[0]
+deck ||= "ruby"
 def getkey
   begin
     system("stty raw -echo")
@@ -13,25 +13,22 @@ def getkey
   str
 
 end
-
-deck = ARGV[0]
-deck ||= "ruby"
-
 s =  Glance::Session.new(15)
 s.load!()
 s.load_deck "decks/#{deck}.yml"
 s.play do |f|
   puts "\e[H\e[2J"
+  TermInfo.screen_size[1].times {print "-"}
   puts f.question
   getkey
-  puts "-" * 20
+  TermInfo.screen_size[1].times {print "-"}
   puts f.answer
   puts "\n"
   puts "How did you do? [1-3]"
 
   f.score getkey
 
-  puts "W?ould you like another question? [q to quit]"
+  puts "Would you like another question? [q to quit]"
 
   k = getkey
 
