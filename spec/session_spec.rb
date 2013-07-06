@@ -25,6 +25,7 @@ module Glance
 
       @session.play do |f|
         f.question.should be_an_instance_of String
+        f.cards_left.should be >= 0
         f.score(3)
 
       end

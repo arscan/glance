@@ -18,10 +18,11 @@ s.load!()
 s.load_deck "decks/#{deck}.yml"
 s.play do |f|
   puts "\e[H\e[2J"
-  TermInfo.screen_size[1].times {print "-"}
+  puts "#{f.cards_left} left"
+  TermInfo.screen_size[1].times {print "\u23BB"}
   puts f.question
   getkey
-  TermInfo.screen_size[1].times {print "-"}
+  TermInfo.screen_size[1].times {print "\u23BB"}
   puts f.answer
   puts "\n"
   puts "How did you do? [1-3]"

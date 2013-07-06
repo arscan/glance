@@ -87,6 +87,9 @@ module Glance
     def answer
       @card.answer
     end
+    def cards_left
+      @session.cards.length
+    end
     def score(score)
       @session.remove_card(@card) if @card.score(score.to_i)
     end
