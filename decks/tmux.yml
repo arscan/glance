@@ -1,0 +1,102 @@
+name: Tmux
+description: Tmux has some shortcuts
+cards:
+   - question: start a new session
+     answer: tmux 
+     difficulty: 1
+     active: true
+
+   - question: Start a new session with a session name
+     answer: tmux new -s sessionname
+     difficulty: 1
+     active: true
+
+   - question: Join a session in progress
+     answer: tmux a \# (or at, or attach)
+     difficulty: 1
+     active: true
+
+   - question: Join a named session
+     answer: tmux a -t sessionname
+     difficulty: 1
+     active: true
+
+   - question: list sessions
+     answer: tmux ls
+     difficulty: 1
+     active: true
+
+   - question: kill a session
+     answer: tmux kill-sessoin -t sessionname
+     difficulty: 1
+     active: true
+
+   - question: List the sessions
+     answer: ctrl-b s
+     difficulty: 1
+     active: true
+
+   - question:  name the session
+     answer: ctrl-b $
+     difficulty: 1
+     active: true
+
+   - question: new window
+     answer: ctrl-b c
+     difficulty: 1
+     active: true
+
+   - question: list windows
+     answer: ctrl-b w
+     difficulty: 1
+     active: true
+
+   - question: find window
+     answer: ctrl-b f
+     difficulty: 1
+     active: true
+
+   - question: Name a window
+     answer: ctrl-b ,
+     difficulty: 1
+     active: true
+
+   - question: kill a window
+     answer: ctrl-b &
+     difficulty: 1
+     active: true
+
+   - question: horizontal split pane
+     answer: ctrl-b %
+     difficulty: 1
+     active: true
+
+   - question: vertical split pane
+     answer: ctrl-b ""
+     difficulty: 1
+     active: true
+
+   - question: swap panes
+     answer: ctrl-b o
+     difficulty: 1
+     active: true
+
+   - question: show pane number
+     answer: ctrl-b q
+     difficulty: 1
+     active: true
+
+   - question: kill a pane
+     answer: ctrl-b x
+     difficulty: 1
+     active: true
+
+   - question: break a pane into a window
+     answer: ctrl-b +
+     difficulty: 1
+     active: true
+
+   - question: restore pane from window
+     answer: ctrl-b -
+     difficulty: 1
+     active: true
