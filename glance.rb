@@ -17,7 +17,7 @@ end
 deck = ARGV[0]
 deck ||= "ruby"
 
-s =  Glance::Session.new(30)
+s =  Glance::Session.new(15)
 s.load!()
 s.load_deck "decks/#{deck}.yml"
 s.play do |f|
