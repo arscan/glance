@@ -20,3 +20,9 @@ cards:
      answer: rails runner script/scriptname
      difficulty: 1
      active: true
+
+   - question: Create a migration that adds a summary column of type text to the UserLinks table
+     answer: rails g migration AddSummaryToUserLinks summary:text
+     difficulty: 1
+     active: true
+
