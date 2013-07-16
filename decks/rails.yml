@@ -26,8 +26,7 @@ cards:
      difficulty: 1
      active: true
      
-   - question: Grab all info in a model sorted by creation date$                                                                                          |~                              
-     answer: Userlink.order("created_at desc").all $                                                                                                      |~                              
-     difficulty: 1$                                                                                                                                       |~                              
-     active: true$  
-
+   - question: Grab all info in a model sorted by creation date
+     answer: Userlink.order("created_at desc").all
+     difficulty: 1
+     active: true  
